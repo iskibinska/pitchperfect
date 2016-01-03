@@ -21,5 +21,33 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func Stop(sender: AnyObject) {
+        
+        recordingInProgress.hidden = true;
+        
+        
+    }
+    @IBOutlet weak var recordingInProgress: UILabel!
+    
+    @IBOutlet weak var stopButton: UIButton!
+    
+    @IBAction func recordAudio(sender: UIButton) {
+    
+        stopButton.hidden = false;
+        recordingInProgress.hidden = false;
+        
+        println("in record Audio");
+        
+        
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+    
+        stopButton.hidden = true;
+        
+        
+    }
+    
 }
 
